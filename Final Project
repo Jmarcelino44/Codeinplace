@@ -1,0 +1,16 @@
+
+print("Can you guess what are the top ten strongest curriencies in the world currently?")
+print("Fun Fact: Economic freedom helps political freedom.")
+import random
+words = [ "United States Dollar", "Euro" , "Swiss Franc" ,"British Pound","Kuwaiti Dinar", "Bahraini Dinar", "Omani Rial","Jordanian Dinar","Cayman Islands Dollar","Gibraltar Pound"]
+word = random.choice(words)
+guesses = []  
+while True: 
+    guess = input("Guess the currency: ")
+    if guess in word:
+        guesses.append(guess)
+    else:
+        print("That letter is not in the currency word list.")
+    if len(guesses) == len(word):
+        print("You guessed the word!")
+        break 
